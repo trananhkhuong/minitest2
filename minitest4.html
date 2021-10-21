@@ -6,7 +6,25 @@
 </head>
 <body>
 <script>
-
+    function isPrime(number) {
+        if (number <= 1) {
+            return false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    let totalPrime = 0;
+    for (let i = 0; i < 500; i++) {
+        if (isPrime(i)) {
+            totalPrime += i;
+        }
+    }
+    document.write('Tổng các số nguyên tố nhỏ hơn 500 là: ' + ' ' + totalPrime);
 </script>
 </body>
 </html>
