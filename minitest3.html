@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+        let arr = [2,99,7,13,6,9,17,23,25,31,78,23,11,28,68,86,82,2002];
+        let totalPrime = 0;
+        function isPrime(number){
+        if (number <= 1){
+        return false;
+    }
+        else {
+        for (let i = 2; i < number ; i++) {
+        if(number % i === 0 ){
+        return false;
+    }
+    }
+        return true;
+    }
+    }
+
+        for (let i = 0; i < arr.length ; i++) {
+        if (isPrime(arr[i])){
+        totalPrime += arr[i];
+    }
+    }
+        document.write("Tổng các số nguyên tố trong hàm là : " + totalPrime)
+
+</script>
+</body>
+</html>
